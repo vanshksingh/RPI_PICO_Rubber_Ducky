@@ -24,6 +24,13 @@ void triggerAutomation()
   Keyboard.press(KEY_RETURN);      // Press the Enter key.
   delay(100);                      // Wait for the computer to register the press.
   Keyboard.releaseAll();           // Release the Enter key.
+  delay(100);
+  Keyboard.print("This is a demo");
+  delay(500);
+  Keyboard.press(KEY_RETURN);
+  delay(100);                      // Wait for the computer to register the press.
+  Keyboard.releaseAll();           // Release the Enter key.
+  delay(100);
   Keyboard.print("nc towel.blinkenlights.nl 23");
   delay(500);
   Keyboard.press(KEY_RETURN);
