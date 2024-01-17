@@ -1,3 +1,5 @@
+
+
 #include <Keyboard.h>
 #include <Arduino.h>
 
@@ -25,14 +27,17 @@ void setup() {
   // Generate a random string of length 10 and add .html extension
   randomString = generateRandomString(10) + ".html";
 
-  delay(5000);
-  triggerAutomation();
+  delay(500);
 }
 
 
 void loop() {
-  // No repeating actions required, loop can remain empty.
+  if (BOOTSEL) {
+    triggerAutomation();
+    while (BOOTSEL);
+  }
 }
+
 
 void triggerAutomation() {
   // Open Spotlight
